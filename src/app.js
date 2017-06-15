@@ -27,18 +27,3 @@ render(
     <BooksList/>
   </Provider>, document.getElementById('app')
 );
-
-// store.dispatch(postBooks(
-//
-// ));
-
-// store.dispatch(deleteBook({id:1}));
-//
-// store.dispatch(updateBook(
-//   {
-//     id:2,
-//     title: "Great new title"
-//   }
-// ));
-//
-// store.dispatch(addToCart([{id:2}]));

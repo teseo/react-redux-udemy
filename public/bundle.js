@@ -11500,21 +11500,6 @@ var store = (0, _redux.createStore)(_index2.default, middleware);
   _react2.default.createElement(_booksList2.default, null)
 ), document.getElementById('app'));
 
-// store.dispatch(postBooks(
-//
-// ));
-
-// store.dispatch(deleteBook({id:1}));
-//
-// store.dispatch(updateBook(
-//   {
-//     id:2,
-//     title: "Great new title"
-//   }
-// ));
-//
-// store.dispatch(addToCart([{id:2}]));
-
 /***/ }),
 /* 104 */
 /***/ (function(module, exports, __webpack_require__) {
