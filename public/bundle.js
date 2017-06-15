@@ -11456,7 +11456,7 @@ module.exports = __webpack_require__(146);
 
 "use strict";
 
-// IMPORT DEPENDENCIES
+// Import Dependencies
 
 var _redux = __webpack_require__(25);
 
@@ -11487,7 +11487,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 // Create logger middleware
 
 
-// IMPORT COMBINED REDUCERS
+// Import combined reducers
 var middleware = (0, _redux.applyMiddleware)(_reduxLogger.logger);
 
 // Create store

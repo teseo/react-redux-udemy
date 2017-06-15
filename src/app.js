@@ -1,12 +1,12 @@
 "use strict"
-// IMPORT DEPENDENCIES
+// Import Dependencies
 import {applyMiddleware, createStore} from 'redux';
 import {logger} from 'redux-logger';
 import React from 'react';
 import {render} from 'react-dom';
 import {Provider} from 'react-redux';
 
-// IMPORT COMBINED REDUCERS
+// Import combined reducers
 import reducers from './reducers/index';
 
 // IMPORT Actions
