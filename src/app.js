@@ -1,5 +1,5 @@
 "use strict"
-
+// IMPORT DEPENDENCIES
 import {applyMiddleware, createStore} from 'redux';
 import {logger} from 'redux-logger';
 import React from 'react';
@@ -13,15 +13,16 @@ import reducers from './reducers/index';
 import {addToCart} from './actions/cartActions';
 import {postBooks, updateBook, deleteBook} from './actions/bookActions';
 
+// IMPORT Bookslist Component
 import BooksList from './components/pages/booksList';
 
-
-
-// STEP 1 create store
+// Create logger middleware
 const middleware = applyMiddleware(logger);
-const store = createStore(reducers, middleware);
-// STEP 2 create and dispatch actions
 
+// Create store
+const store = createStore(reducers, middleware);
+
+//Provide booksList with redux store
 render(
   <Provider store={store}>
     <BooksList/>

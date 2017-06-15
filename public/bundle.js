@@ -11456,6 +11456,7 @@ module.exports = __webpack_require__(146);
 
 "use strict";
 
+// IMPORT DEPENDENCIES
 
 var _redux = __webpack_require__(25);
 
@@ -11483,17 +11484,22 @@ var _booksList2 = _interopRequireDefault(_booksList);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// STEP 1 create store
+// Create logger middleware
 
 
 // IMPORT COMBINED REDUCERS
 var middleware = (0, _redux.applyMiddleware)(_reduxLogger.logger);
 
+// Create store
+
+
+// IMPORT Bookslist Component
+
+
 // IMPORT Actions
-
 var store = (0, _redux.createStore)(_index2.default, middleware);
-// STEP 2 create and dispatch actions
 
+//Provide booksList with redux store
 (0, _reactDom.render)(_react2.default.createElement(
   _reactRedux.Provider,
   { store: store },
