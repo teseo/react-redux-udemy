@@ -10,7 +10,10 @@ import {
 
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
-import {addToCart} from '../../actions/cartActions';
+import {
+  addToCart,
+  updateCart
+} from '../../actions/cartActions';
 
 class BookItem extends React.Component {
   handleCart(){
@@ -19,8 +22,27 @@ class BookItem extends React.Component {
       title: this.props.title,
       price: this.props.price,
       description: this.props.description,
+      quantity: 1
     }];
-    this.props.addToCart(book);
+    //Check if cart is empty
+    if(this.props.cart.length > 0 ) {
+      //cart is not empty
+      let _id = this.props._id;
+
+      let cartIndex = this.props.cart.findIndex(function(cart){
+        return cart._id === _id
+      });
+      //if returns -1, there are no items in the cart with that id
+      if (cartIndex === -1) {
+        this.props.addToCart(book);
+      }
+      else {
+        this.props.updateCart(_id, 1);
+      }
+    } else {
+      //cart is empty
+      this.props.addToCart(book);
+    }
   }
   render(){
     return (
@@ -46,7 +68,8 @@ function mapStateToProps(state){
 }
 function mapDispatchToProps(dispatch){
   return bindActionCreators({
-    addToCart
+    addToCart,
+    updateCart
   }, dispatch);
 }
 export default connect(mapStateToProps,mapDispatchToProps)(BookItem);

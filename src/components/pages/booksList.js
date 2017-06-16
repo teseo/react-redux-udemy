@@ -29,7 +29,7 @@ class BooksList extends React.Component {
     });
     return (
       <Grid>
-        <Row>
+        <Row style={{marginTop: '15px'}}>
           <Col>
             <Cart />
           </Col>
